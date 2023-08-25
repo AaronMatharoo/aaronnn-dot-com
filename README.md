@@ -1,25 +1,20 @@
-# Next + Netlify Starter
+# aaronnn-dot-com
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/46648482-644c-4c80-bafb-872057e51b6b/deploy-status)](https://app.netlify.com/sites/next-dev-starter/deploys)
+<!-- [![Netlify Status](https://api.netlify.com/api/v1/badges/46648482-644c-4c80-bafb-872057e51b6b/deploy-status)](https://app.netlify.com/sites/next-dev-starter/deploys) -->
 
-This is a [Next.js](https://nextjs.org/) v12 project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and set up to be instantly deployed to [Netlify](https://url.netlify.com/SyTBPVamO)!
+This is aaronnn.com, a [Next.js](https://nextjs.org/) v12 project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and deployed using [Netlify](https://url.netlify.com/SyTBPVamO)!
 
-This project is a very minimal starter that includes 2 sample components, a global stylesheet, a `netlify.toml` for deployment, and a `jsconfig.json` for setting up absolute imports and aliases. With Netlify, you'll have access to features like Preview Mode, server-side rendering/incremental static regeneration via Netlify Functions, and internationalized routing on deploy automatically.
+This project is a quick overview of my capabilities, experience, and work experience. Netlify was the ideal choice for this type of project, especially given the vast array of features it offered such as Preview Mode, server-side rendering/incremental static regeneration, and internationalized routing on deploy automatically. The automatic deploy made issuing updates a breeze!
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/next-netlify-starter&utm_source=github&utm_medium=nextstarter-cs&utm_campaign=devex-cs)
+[![Visit aaronnn.com](https://www.aaronnn.com)]
 
-(If you click this button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify)
+(This button will take you directly to my site!)
 
-## Table of Contents:
+## A Public Invitation:
 
-- [Getting Started](#getting-started)
-- [Installation options](#installation-options)
-- [Testing](#testing)
-  - [Included Default Testing](#included-default-testing)
-  - [Removing Renovate](#removing-renovate)
-  - [Removing Cypress](#removing-cypress)
+Feel free to examine any of the code you see in this repository. For any questions, comments, or inquiries, don't hesitate to reach out to me! My work related email address is aarons.developments@gmail.com.
 
-## Getting Started
+<!-- ## Getting Started
 
 First, run the development server:
 
@@ -87,4 +82,4 @@ And lastly if you’d like to remove Cypress entirely, delete the entire `cypres
 
 ```bash
 npm uninstall -S cypress
-```
+``` -->

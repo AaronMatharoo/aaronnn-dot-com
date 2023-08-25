@@ -2,24 +2,23 @@ import SlidingBanner from "@components/SlidingBanner";
 import Marquee from "react-fast-marquee";
 
 export default function Home() {
-
   return (
     <div className="h-screen flex flex-col">
       <div>
         <SlidingBanner />
       </div>
-      <div className="flex-1 bg-slate-400 grid grid-rows-6 grid-cols-6">
-        <div className=" row-span-3 col-span-4 bg-red-500 border-r-2 border-b-2 border-black hover:scale-95 duration-100 hover:border-t-2 hover:border-l-2">
-          About
+      <div className="bg-black flex-1 grid grid-rows-6 grid-cols-6">
+        <div className="bg-white flex items-center row-span-3 col-span-4 border-[1.5px] border-black hover:scale-95 duration-100 hover:border-2">
+          <h1 className="text-5xl text-center w-full">About</h1>
         </div>
-        <div className=" row-span-3 col-span-2 bg-purple-500 border-r-2 border-b-2 border-black hover:scale-95 duration-100 hover:border-t-2 hover:border-l-2">
-          Aboutsdsdsd
+        <div className="bg-white flex items-center  row-span-3 col-span-2 border-[1.5px] border-black hover:scale-95 duration-100 hover:border-2">
+          <h1 className="text-5xl text-center w-full">Resume</h1>
         </div>
-        <div className=" row-span-3 col-span-2 bg-yellow-500 border-r-2 border-b-2 border-black hover:scale-95 duration-100 hover:border-t-2 hover:border-l-2">
-          dsadsd
+        <div className="bg-white flex items-center  row-span-3 col-span-2 border-[1.5px] border-black hover:scale-95 duration-100 hover:border-2">
+          <h1 className="text-5xl text-center w-full">Contact</h1>
         </div>
-        <div className=" row-span-3 col-span-4 bg-green-500 border-r-2 border-b-2 border-black hover:scale-95 duration-100 hover:border-t-2 hover:border-l-2">
-          eqweerrewrew
+        <div className="bg-white flex items-center row-span-3 col-span-4 border-[1.5px] border-black hover:scale-95 duration-100 hover:border-2">
+          <h1 className="text-5xl text-center w-full">Projects</h1>
         </div>
       </div>
     </div>
