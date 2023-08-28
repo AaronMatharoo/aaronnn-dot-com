@@ -1,6 +1,10 @@
-import SlidingBanner from "@components/SlidingBanner";
 import { useRouter } from "next/router";
 import { ReactNode } from "react";
+import { GrContactInfo } from "react-icons/gr";
+import { LuNewspaper } from "react-icons/lu";
+import { BsMailbox } from "react-icons/bs";
+import Navigation from "@components/Navigation";
+import NavigationButton from "@components/NavigationButton";
 
 export default function Projects() {
   const router = useRouter();
@@ -11,37 +15,51 @@ export default function Projects() {
     }, 300);
   };
 
-  const NavButton = ({ text, link }: { text: string; link: string }) => {
+  const PortfolioItem = ({
+    children,
+    link,
+  }: {
+    children: ReactNode;
+    link: string;
+  }) => {
     return (
-      <a onClick={() => handleRoute(link)}>
-        <div className="bg-white border-2 border-black hover:scale-95 duration-100 hover:border-2 hover:font-bold hover:cursor-pointer active:scale-90 py-1">
-          <h1 className="text-3xl text-center w-full">{text}</h1>
-        </div>
+      <a
+        onClick={() => handleRoute(link)}
+        className="lg:hover:scale-95 duration-200 hover:cursor-pointer lg:active:scale-90 lg:grayscale hover:grayscale-0"
+      >
+        {children}
       </a>
     );
   };
 
-  const PortfolioItem = ({ children, link }: { children: ReactNode; link:string }) => {
-    return (
-    <a onClick={() => handleRoute(link)} className="hover:scale-95 duration-200 hover:cursor-pointer active:scale-90 grayscale hover:grayscale-0">
-        {children}
-    </a>
-    )
-    ;
-  };
-
   return (
     <div className="bg-black">
-      {/* <SlidingBanner /> */}
-      <div className="grid grid-cols-3 bg-black">
-        <NavButton text="HOME" link="/" />
-        <NavButton text="RESUME" link="/Resume" />
-        <NavButton text="CONTACT" link="/Contact" />
-      </div>
-      {/* project display */}
-      <div className="grid grid-rows-2 grid-cols-4">
+      <Navigation
+        route2={
+          <NavigationButton
+            text="ABOUT"
+            link="/About"
+            icon={<GrContactInfo size={30} />}
+          />
+        }
+        route3={
+          <NavigationButton
+            text="RESUME"
+            link="/Resume"
+            icon={<LuNewspaper size={30} />}
+          />
+        }
+        route4={
+          <NavigationButton
+            text="CONTACT"
+            link="/Contact"
+            icon={<BsMailbox size={30} />}
+          />
+        }
+      />
+      <div className="grid lg:grid-rows-2 lg:grid-cols-4 grid-flow-row mt-10 lg:mt-0">
         <PortfolioItem link="https://pong.aaronnn.com">
-          <img src="pong.png"  />
+          <img src="pong.png" />
         </PortfolioItem>
         <PortfolioItem link="/Land">
           <img src="landscape.png" />
