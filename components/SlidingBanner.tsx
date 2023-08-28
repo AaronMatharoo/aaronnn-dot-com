@@ -20,7 +20,7 @@ const SlidingBanner = () => {
       const Slider = () => {
         return (
           <>
-            <div className="w-full py-2 h-12 border-y-2 border-black overflow-hidden relative">
+            <div className="w-full py-2 h-12 border-t-2 border-b-[1.5px] border-black overflow-hidden relative">
               <Marquee>
                 {SlidingTexts.map((text) => (
                   <div className=" flex items-center whitespace-nowrap flex-shrink-0">
