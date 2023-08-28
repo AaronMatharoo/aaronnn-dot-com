@@ -46,7 +46,7 @@ export default function Projects() {
         <PortfolioItem link="/Land">
           <img src="landscape.png" />
         </PortfolioItem>
-        <PortfolioItem>
+        {/* <PortfolioItem>
           <img src="nwts.png" />
         </PortfolioItem>
         <PortfolioItem>
@@ -63,7 +63,7 @@ export default function Projects() {
         </PortfolioItem>
         <PortfolioItem>
           <img src="nwts.png" />
-        </PortfolioItem>
+        </PortfolioItem> */}
       </div>
     </div>
   );
