@@ -12,7 +12,6 @@ import { LuNewspaper } from "react-icons/lu";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 export default function About() {
-
   const SkillList = [
     "REACT",
     "TYPESCRIPT",
@@ -71,11 +70,16 @@ export default function About() {
           }
         />
       </div>
-      <div className="grid grid-cols-2">
+      <div className="grid lg:grid-cols-2 grid-flow-row lg:py-0 py-10">
         <div className="flex items-center p-10">
           {/* <h1 className="text-xl font-light">Hey there!</h1> */}
           <div className=" space-y-5">
-            <TypeWriter text="My name is Aaron!" />
+            <div className="hidden lg:flex">
+              <TypeWriter text="My name is Aaron!" />
+            </div>
+            <div className="lg:hidden">
+              <TypeWriter text="Hi I'm Aaron" />
+            </div>
             <h1 className="text-xl font-light text-[#5d00d7]">
               WEB APPLICATION DEVELOPER | SOFTWARE ENGINEER
             </h1>
@@ -85,8 +89,8 @@ export default function About() {
           <img src="geowaves.png" className="max-w-full max-h-full" alt="" />
         </div>
       </div>
-      <div className="grid grid-cols-2">
-        <div className="p-10 pl-20 space-y-10 ">
+      <div className="grid lg:grid-cols-2 grid-flow-row">
+        <div className="p-10 pl-20 space-y-10 hidden lg:block ">
           <h1 className="font-semibold text-3xl">The Projects Page</h1>
           <button
             className="bg-[#f0f0f5] text-[#5d00d7] font-light border-[#5d00d7] border-2 py-1 px-2 rounded-md text-3xl hover:scale-110 duration-100 hover:font-semibold active:scale-95"
@@ -95,27 +99,53 @@ export default function About() {
             SEE MY WORK HERE
           </button>
         </div>
-        <div className="py-10 space-y-5">
-          <h1 className="font-semibold text-3xl">Technical Skills</h1>
+        <div className="py-10 space-y-5 px-10 lg:px-0">
+          <h1 className="font-semibold text-3xl text-center lg:text-left">
+            Technical Skills
+          </h1>
           <div className="flex flex-wrap">
             {SkillList.map((skill) => (
               <SkillPill text={skill} />
             ))}
           </div>
         </div>
+        <div className="p-10 space-y-10 lg:hidden ">
+          <h1 className="font-semibold text-3xl text-center">
+            The Projects Page
+          </h1>
+          <button
+            className="bg-[#f0f0f5] text-[#5d00d7] font-light border-[#5d00d7] border-2 py-1 px-2 rounded-md text-3xl hover:scale-110 duration-100 hover:font-semibold active:scale-95"
+            onClick={() => handleRoute("/Projects")}
+          >
+            SEE MY WORK HERE
+          </button>
+        </div>
       </div>
       <div className="flex justify-center space-x-5 py-10">
         <div className="animate-arrow-ping">
           <MdOutlineKeyboardArrowDown size={50} />
         </div>
-        <h1 className="text-center text-5xl font-semibold">More about me</h1>
+        <h1 className="text-center text-5xl font-semibold hidden lg:block">
+          More about me
+        </h1>
+        <h1 className="text-center text-5xl font-semibold lg:hidden pb-10 lg:pb-0">
+          About me
+        </h1>
         <div className="animate-arrow-ping">
           <MdOutlineKeyboardArrowDown size={50} />
         </div>
       </div>
-      <div className="grid grid-cols-2">
+      <div className="grid lg:grid-cols-2 grid-flow-row">
+        <div className="lg:hidden justify-center h-min flex">
+          <img src="IDCard-02.png" alt="" className="lg:h-[250px] h-[100px]" />
+        </div>
         <div className="p-10 space-y-5">
-          <h1 className="font-semibold text-3xl">Who & where am I?</h1>
+          <h1 className="font-semibold text-3xl hidden lg:block">
+            Who Am I? Where am I?
+          </h1>
+          <h1 className="font-semibold text-3xl lg:hidden text-center">
+            Who/Where am I?
+          </h1>
           <div className="space-y-5">
             <h1 className="font-light text-xl">
               I'm Aaron Matharoo! Technology enthusiast, problem solver, sim
@@ -130,14 +160,20 @@ export default function About() {
             </h1>
           </div>
         </div>
-        <div className="flex justify-center h-min">
+        <div className="lg:flex justify-center h-min hidden">
           <img src="IDCard-02.png" alt="" className="h-[250px]" />
         </div>
         <div className="flex justify-center h-min">
-          <img src="Career-02.png" alt="" className="h-[425px] mt-5" />
+          <img
+            src="Career-02.png"
+            alt=""
+            className="lg:h-[425px] h-[150px] mt-5"
+          />
         </div>
         <div className="p-10 space-y-5">
-          <h1 className="font-semibold text-3xl">Rich Experiences</h1>
+          <h1 className="font-semibold text-3xl text-center lg:text-left">
+            Rich Experiences
+          </h1>
           <div className="space-y-5">
             <h1 className="font-light text-xl">
               All of my studying was completed right here in Southern Ontario. I
@@ -160,7 +196,14 @@ export default function About() {
           </div>
         </div>
         <div className="p-10 space-y-5">
-          <h1 className="font-semibold text-3xl">
+          <div className="flex justify-center h-min lg:hidden">
+            <img
+              src="tech-02.png"
+              alt=""
+              className="lg:h-[350px] h-[150px] lg:mt-16"
+            />
+          </div>
+          <h1 className="font-semibold text-3xl text-center lg:text-left">
             My Mission, Passions, & Beyond
           </h1>
           <div className="space-y-5">
@@ -193,14 +236,20 @@ export default function About() {
             </h1>
           </div>
         </div>
-        <div className="flex justify-center h-min">
+        <div className="lg:flex justify-center h-min hidden ">
           <img src="tech-02.png" alt="" className="h-[350px] mt-16" />
         </div>
         <div className="flex justify-center h-min">
-          <img src="connect-02.png" alt="" className="h-[425px] mt-5" />
+          <img
+            src="connect-02.png"
+            alt=""
+            className="lg:h-[425px] h-[150px] mt-5"
+          />
         </div>
         <div className="p-10 space-y-5">
-          <h1 className="font-semibold text-3xl">Let's Connect!</h1>
+          <h1 className="font-semibold text-3xl text-center lg:text-left">
+            Let's Connect!
+          </h1>
           <div className="space-y-5">
             <h1 className="font-light text-xl">
               Whether it's a coding conundrum, a design challenge, or a

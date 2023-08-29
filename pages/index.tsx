@@ -7,8 +7,6 @@ import { useState } from "react";
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
 
-  const visibleStyles = `text-5xl text-center w-full ${isVisible ? "" : ""}`;
-
   const router = useRouter();
 
   const handleRoute = (link: string) => {
