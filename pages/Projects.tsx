@@ -25,7 +25,7 @@ export default function Projects() {
     return (
       <a
         onClick={() => handleRoute(link)}
-        className="lg:hover:scale-95 duration-200 hover:cursor-pointer lg:active:scale-90 lg:grayscale hover:grayscale-0"
+        className="lg:hover:scale-95 duration-200 hover:cursor-pointer lg:active:scale-90 hover:grayscale-0"
       >
         {children}
       </a>
@@ -76,12 +76,9 @@ export default function Projects() {
         <PortfolioItem link="/Land">
           <img src="landscape.png" />
         </PortfolioItem>
-        <PortfolioItem link="https://pong.aaronnn.com">
-          <img src="pong.png" />
-        </PortfolioItem>
-        <PortfolioItem link="/Land">
-          <img src="landscape.png" />
-        </PortfolioItem>
+        <div className="col-span-2 text-neutral-950 duration-700 hover:text-[#f0f0f5] flex items-center justify-center">
+            <h1 className="text-5xl">More coming soon...</h1>
+        </div>
         {/* <PortfolioItem>
           <img src="nwts.png" />
         </PortfolioItem>

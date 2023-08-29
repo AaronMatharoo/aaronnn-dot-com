@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        'bounce-it': 'bounce 3s ease-in-out infinite',
+        'arrow-ping': 'ping 3s ease-in-out infinite',
       }
     },
   },
