@@ -93,7 +93,7 @@ export default function About() {
         <div className="p-10 pl-20 space-y-10 hidden lg:block ">
           <h1 className="font-semibold text-3xl">The Projects Page</h1>
           <button
-            className="bg-[#f0f0f5] text-[#5d00d7] font-light border-[#5d00d7] border-2 py-1 px-2 rounded-md text-3xl hover:scale-110 duration-100 hover:font-semibold active:scale-95"
+            className="bg-[#f0f0f5] text-[#5d00d7] font-light border-[#5d00d7] border-2 py-1 px-2 rounded-md lg:text-3xl text-2xl hover:scale-110 duration-100 hover:font-semibold active:scale-95"
             onClick={() => handleRoute("/Projects")}
           >
             SEE MY WORK HERE
@@ -113,12 +113,14 @@ export default function About() {
           <h1 className="font-semibold text-3xl text-center">
             The Projects Page
           </h1>
-          <button
-            className="bg-[#f0f0f5] text-[#5d00d7] font-light border-[#5d00d7] border-2 py-1 px-2 rounded-md text-3xl hover:scale-110 duration-100 hover:font-semibold active:scale-95"
-            onClick={() => handleRoute("/Projects")}
-          >
-            SEE MY WORK HERE
-          </button>
+          <div className="flex justify-center">
+            <button
+              className="bg-[#f0f0f5] text-[#5d00d7] font-light border-[#5d00d7] border-2 py-1 px-2 rounded-md lg:text-3xl text-2xl hover:scale-110 duration-100 hover:font-semibold active:scale-95"
+              onClick={() => handleRoute("/Projects")}
+            >
+              SEE MY WORK HERE
+            </button>
+          </div>
         </div>
       </div>
       <div className="flex justify-center space-x-5 py-10">
@@ -194,6 +196,14 @@ export default function About() {
               design projects.
             </h1>
           </div>
+          <div className="flex justify-center py-10">
+            <button
+              className="bg-[#f0f0f5] text-[#5d00d7] font-light border-[#5d00d7] border-2 py-1 px-2 rounded-md lg:text-3xl text-2xl hover:scale-110 duration-100 hover:font-semibold active:scale-95"
+              onClick={() => handleRoute("/Resume")}
+            >
+              SEE MY EXPERIENCE
+            </button>
+          </div>
         </div>
         <div className="p-10 space-y-5">
           <div className="flex justify-center h-min lg:hidden">
@@ -260,7 +270,7 @@ export default function About() {
             </h1>
             <div className="flex justify-center py-10">
               <button
-                className="bg-[#f0f0f5] text-[#5d00d7] font-light border-[#5d00d7] border-2 py-1 px-2 rounded-md text-3xl hover:scale-110 duration-100 hover:font-semibold active:scale-95"
+                className="bg-[#f0f0f5] text-[#5d00d7] font-light border-[#5d00d7] border-2 py-1 px-2 rounded-md lg:text-3xl text-2xl hover:scale-110 duration-100 hover:font-semibold active:scale-95"
                 onClick={() => handleRoute("/Contact")}
               >
                 CONNECT WITH ME
