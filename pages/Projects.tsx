@@ -25,7 +25,7 @@ export default function Projects() {
     return (
       <a
         onClick={() => handleRoute(link)}
-        className="lg:hover:scale-95 duration-200 hover:cursor-pointer lg:active:scale-90 hover:grayscale-0"
+        className="lg:hover:scale-95 duration-200 hover:cursor-pointer lg:active:scale-90 hover:grayscale-0 grayscale"
       >
         {children}
       </a>

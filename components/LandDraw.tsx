@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import p5Types from "p5";
-import { BarLoader, PropagateLoader } from "react-spinners";
+import { PropagateLoader } from "react-spinners";
 //@ts-ignore
 
 const Sketch = dynamic(() => import("react-p5").then((mod) => mod.default), {
@@ -24,9 +24,15 @@ export const LandDraw: React.FC<ComponentProps> = (props: ComponentProps) => {
 
   const draw = (p5: p5Types) => {
     p5.noStroke();
-    //@ts-ignore
+    const isMobile = window.innerWidth <= 450;
 
-    repeat(180, 900, 1, 200, 500, 1, gradient_land(p5));
+    if (isMobile) {
+      //@ts-ignore
+      repeat(-10, 250, 1, 100, 200, 1, gradient_land(p5));
+    } else {
+      //@ts-ignore
+      repeat(180, 900, 1, 200, 500, 1, gradient_land(p5));
+    }
   };
 
   const gradient_land = (p5: p5Types) => {
@@ -76,7 +82,9 @@ export const LandDraw: React.FC<ComponentProps> = (props: ComponentProps) => {
 
   return (
     <div className="bg-[#e0e0e0] relative flex justify-center items-center h-screen">
-      <Sketch setup={setup} draw={draw} />
+      <div>
+        <Sketch setup={setup} draw={draw} />
+      </div>
       <button className="absolute bottom-28" onClick={() => router.reload()}>
         <div className="bg-gradient-to-br from-purple-500 to-pink-300 hover:bg-pink-300 transition duration-200 border-black border-2 px-4 py-2 rounded-lg active:scale-110">
           <h1 className="hover:font-bold duration-100 text-xl">
