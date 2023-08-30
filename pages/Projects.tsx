@@ -64,8 +64,8 @@ export default function Projects() {
         <PortfolioItem link="/Land">
           <img src="landscape.png" />
         </PortfolioItem>
-        <PortfolioItem link="https://pong.aaronnn.com">
-          <img src="pong.png" />
+        <PortfolioItem link="https://expressions.aaronnn.com">
+          <img src="expression.jpg" />
         </PortfolioItem>
         <PortfolioItem link="/Land">
           <img src="landscape.png" />

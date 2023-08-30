@@ -44,7 +44,7 @@ export default function About() {
   const { handleRoute } = useHandleRoute();
 
   return (
-    <div className="bg-[#f0f0f5]">
+    <div className="bg-[#f0f0f5] pb-10">
       <div className="">
         <Navigation
           route2={

@@ -71,7 +71,7 @@ export default function Contact() {
             <img src="contact-02.png" className="h-[150px]" />
           </div>
           <h1 className="text-3xl">
-            Don't be shy! Whether its work or leisure related, I am always
+            Don't be shy! Whether it's work or leisure related, I am always
             looking forward to meeting new people and discussing different
             interests!
           </h1>
