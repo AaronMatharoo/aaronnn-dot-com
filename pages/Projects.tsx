@@ -58,26 +58,26 @@ export default function Projects() {
         }
       />
       <div className="grid lg:grid-rows-2 lg:grid-cols-4 grid-flow-row mt-10 lg:mt-0">
-        <PortfolioItem link="https://pong.aaronnn.com">
-          <img src="pong.png" />
+        <PortfolioItem link="/RideCaller">
+          <img src="ridecaller.png" />
         </PortfolioItem>
-        <PortfolioItem link="/Land">
-          <img src="landscape.png" />
+        <PortfolioItem link="https://blackstone.aaronnn.com">
+          <img src="landing-page.png" />
         </PortfolioItem>
         <PortfolioItem link="https://expressions.aaronnn.com">
           <img src="expression.jpg" />
         </PortfolioItem>
-        <PortfolioItem link="/Land">
-          <img src="landscape.png" />
-        </PortfolioItem>
         <PortfolioItem link="https://pong.aaronnn.com">
           <img src="pong.png" />
         </PortfolioItem>
         <PortfolioItem link="/Land">
           <img src="landscape.png" />
         </PortfolioItem>
-        <div className="col-span-2 text-neutral-950 duration-700 hover:text-[#f0f0f5] flex items-center justify-center">
-            <h1 className="text-5xl">More coming soon...</h1>
+        {/* <PortfolioItem link="/Land">
+          <img src="landscape.png" />
+        </PortfolioItem> */}
+        <div className="col-span-3 text-neutral-950 duration-700 hover:text-[#f0f0f5] flex items-center justify-center">
+          <h1 className="text-5xl">More coming soon...</h1>
         </div>
         {/* <PortfolioItem>
           <img src="nwts.png" />
