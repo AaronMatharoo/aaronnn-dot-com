@@ -85,7 +85,7 @@ export default function Projects() {
           img="expression.jpg"
           link="https://expressions.aaronnn.com"
           description="Facial expression detection using built-in webcam for desktop"
-          skills={["HTML", "JavaScript", "CSS", "face.js API"]}
+          skills={["HTML", "JavaScript", "CSS", "tensorflow.js", "face-api.js"]}
         />
         <PortfolioItem
           img="landscape.png"
