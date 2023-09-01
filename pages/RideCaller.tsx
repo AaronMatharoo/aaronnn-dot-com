@@ -37,7 +37,7 @@ export default function RideCaller() {
       <>
         <div className="grid grid-flow-row justify-center space-y-3">
           <h1 className="font-semibold text-neutral-200 text-3xl">{text}</h1>
-          <div className="grid grid-cols-4 gap-8">
+          <div className="grid lg:grid-cols-4 grid-flow-row gap-8 justify-center">
             <ImgDisplay src={img1} />
             <ImgDisplay src={img2} />
             <ImgDisplay src={img3} />
@@ -49,22 +49,22 @@ export default function RideCaller() {
   };
 
   return (
-    <div className="grid grid-flow-row justify-center space-y-16 py-20 bg-[#2e2f31]">
-      <div className="grid grid-cols-4">
+    <div className="grid grid-flow-row justify-center space-y-16 lg:py-20 py-10 bg-[#2e2f31]">
+      <div className="grid lg:grid-cols-4 grid-flow-row">
         <div></div>
         <div className="col-span-1">
-          <div className="bg-black drop-shadow-[5px_5px_rgba(255,255,255,1)] shadow-white rounded-[45px] h-72 w-72">
-            <img src="splash-04.png" alt="" className="h-72" />
+          <div className="bg-black drop-shadow-[5px_5px_rgba(255,255,255,1)] shadow-white rounded-[45px] lg:h-72 lg:w-72 h-60 w-60">
+            <img src="splash-04.png" alt="" className="lg:h-72 h-60" />
           </div>
         </div>
-        <div className="col-span-2 space-y-5">
-          <h1 className="text-5xl font-bold text-neutral-200">RideCaller</h1>
-          <h1 className="text-2xl font-light text-neutral-200">
+        <div className="col-span-2 space-y-5 py-10 lg:py-0">
+          <h1 className="text-5xl text-center lg:text-left font-bold text-neutral-200">RideCaller</h1>
+          <h1 className="text-2xl text-center lg:text-left font-light text-neutral-200">
             Call A Ride With RideCaller
           </h1>
           <div className="grid grid-flow-row space-y-5">
             <button>
-              <div className="relative flex justify-center items-center bg-slate-200 rounded-xl w-[225px] h-[75px]">
+              <div className="relative flex justify-center items-center bg-slate-200 rounded-xl w-[225px] h-[75px] lg:mx-0 mx-auto">
                 <h1 className="font-semibold">Coming soon!</h1>
                 <div className="absolute hover:hidden">
                   <img src="downloadios.png" alt="" />
@@ -72,7 +72,7 @@ export default function RideCaller() {
               </div>
             </button>
             <button>
-              <div className="relative flex justify-center items-center bg-slate-200 rounded-xl w-[250px] h-[75px]">
+              <div className="relative flex justify-center items-center bg-slate-200 rounded-xl w-[250px] h-[75px] lg:mx-0 mx-auto">
                 <h1 className="font-semibold">Coming soon!</h1>
                 <div className="absolute hover:hidden">
                   <img src="download.png" alt="" />
@@ -96,7 +96,7 @@ export default function RideCaller() {
         img3="apppreview8.png"
         img4="apppreview7.png"
       />
-      <div className="space-y-3 mx-[360px]">
+      <div className="space-y-3 lg:mx-[360px] mx-8">
         <h1 className="font-semibold text-neutral-200 text-3xl">App Description</h1>
         <p className="text-neutral-200 font-light text-xl">
           RideCaller is to be the leading marketplace for finding arranged rides near you. Whether it's for prom,
@@ -106,7 +106,7 @@ export default function RideCaller() {
           with your driver or client effortlessly. Call a ride with RideCaller!
         </p>
       </div>
-      <div className="space-y-3 mx-[360px]">
+      <div className="space-y-3 lg:mx-[360px] mx-8">
         <h1 className="font-bold text-neutral-200 text-xl">Project Structure</h1>
         <p className="text-neutral-200 font-light text-sm">Built with React Native, Expo, & PostgreSQL. Custom React components with NativeBase and gluestack-ui integration. Cross platform mobile application for both Andriod and iOS. Web version of the application & new features are currently under construction. Questions, comments, or inquires may be directed to aarons.developments@gmail.com</p>
       </div>
