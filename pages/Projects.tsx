@@ -68,7 +68,7 @@ export default function Projects() {
           />
         }
       />
-      <div className="grid lg:grid-rows-2 lg:grid-cols-4 grid-flow-row grid-cols-1 mt-10 lg:mt-0 gap-1 ">
+      <div className="grid lg:grid-rows-2 lg:grid-cols-4 grid-flow-row grid-cols-1 mt-10 lg:mt-0 gap-1 p-1 lg:p-0">
         <PortfolioItem
           img="ridecaller.png"
           link="/RideCaller"

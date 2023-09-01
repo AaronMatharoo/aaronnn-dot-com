@@ -76,16 +76,7 @@ export default function About() {
         </div>
       </div>
       <div className="grid lg:grid-cols-2 grid-flow-row">
-        <div className="p-10 pl-20 space-y-10 hidden lg:block ">
-          <h1 className="font-semibold text-3xl">The Projects Page</h1>
-          <button
-            className="bg-[#f0f0f5] text-[#5d00d7] font-light border-[#5d00d7] border-2 py-1 px-2 rounded-md lg:text-3xl text-2xl hover:scale-110 duration-100 hover:font-semibold active:scale-95"
-            onClick={() => handleRoute("/Projects")}
-          >
-            SEE MY WORK HERE
-          </button>
-        </div>
-        <div className="py-10 space-y-5 px-10 lg:px-0">
+        <div className="py-10 space-y-5 px-10 lg:px-10">
           <h1 className="font-semibold text-3xl text-center lg:text-left">
             Technical Skills
           </h1>
@@ -94,6 +85,15 @@ export default function About() {
               <SkillPill text={skill} />
             ))}
           </div>
+        </div>
+        <div className="p-10 lg:pl-0 pl-20 space-y-10 hidden lg:block ">
+          <h1 className="font-semibold text-3xl">The Projects Page</h1>
+          <button
+            className="bg-[#f0f0f5] text-[#5d00d7] font-light border-[#5d00d7] border-2 py-1 px-2 rounded-md lg:text-3xl text-2xl hover:scale-110 duration-100 hover:font-semibold active:scale-95"
+            onClick={() => handleRoute("/Projects")}
+          >
+            SEE MY WORK HERE
+          </button>
         </div>
         <div className="p-10 space-y-10 lg:hidden ">
           <h1 className="font-semibold text-3xl text-center">
@@ -305,6 +305,9 @@ export default function About() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="hover:text-[#5d00d7] underline pt-10 flex justify-center text-center">
+        <h1>This site was created using Next.js, React, & Tailwind. All icons, images, and special effects were created custom. Details of this site can be found in the public repository on my GitHub @AaronMatharoo (aaronmatharoo)</h1>
       </div>
     </div>
   );
