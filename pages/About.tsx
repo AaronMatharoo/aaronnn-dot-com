@@ -31,7 +31,7 @@ export default function About() {
   const { handleRoute } = useHandleRoute();
 
   return (
-    <div className="bg-[#f0f0f5] pb-10">
+    <div className="bg-[#f0f0f5]">
       <div className="">
         <Navigation
           route2={
@@ -180,8 +180,7 @@ export default function About() {
                 {" "}
                 computer science{" "}
               </span>
-              , and
-                {" "}
+              , and{" "}
               <span className="underline decoration-[#5d00d7] font-semibold">
                 software development
               </span>
@@ -243,10 +242,11 @@ export default function About() {
                 {" "}
                 especially using React
               </span>
-              . I've mastered the art of using CSS to {" "}
+              . I've mastered the art of using CSS to{" "}
               <span className="underline decoration-[#5d00d7] font-semibold">
-              craft stunning visuals
-                </span>{"  "} 
+                craft stunning visuals
+              </span>
+              {"  "}
               while keeping user experience at the forefront. Back-end
               development is something I've become especially good at as well,
               managing user security and optimizing data retrieval as needed.
@@ -290,7 +290,7 @@ export default function About() {
                 I'm always up for a meaningful exchange
               </span>
               . Join me as I continue to learn, innovate, and make my mark on
-              the ever-evolving tech landscape. {" "}
+              the ever-evolving tech landscape.{" "}
               <span className="font-semibold text-[#5d00d7]">
                 Looking forward to connecting with you!
               </span>
@@ -305,9 +305,14 @@ export default function About() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="hover:text-[#5d00d7] underline pt-10 flex justify-center text-center">
-        <h1>This site was created using Next.js, React, & Tailwind. All icons, images, and special effects were created custom. Details of this site can be found in the public repository on my GitHub @AaronMatharoo (aaronmatharoo)</h1>
+        <div className="hover:text-[#5d00d7] underline py-5 mt-10 flex justify-center text-center bg-[#ffffff] col-span-2">
+          <h1>
+            This site was created using Next.js, React, & Tailwind. All icons,
+            images, and special effects were created custom. Details of this
+            site can be found in the public repository on my GitHub
+            @AaronMatharoo (aaronmatharoo)
+          </h1>
+        </div>
       </div>
     </div>
   );
