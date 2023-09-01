@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
-import { ReactNode } from "react";
 import { GrContactInfo } from "react-icons/gr";
 import { LuNewspaper } from "react-icons/lu";
 import { BsMailbox } from "react-icons/bs";
 import Navigation from "@components/Navigation";
 import NavigationButton from "@components/NavigationButton";
+import SkillPill from "@components/SkillPill";
 
 export default function Projects() {
   const router = useRouter();
@@ -16,18 +16,29 @@ export default function Projects() {
   };
 
   const PortfolioItem = ({
-    children,
+    img,
     link,
+    description,
+    skills,
   }: {
-    children: ReactNode;
-    link: string;
+    img: string;
+    link: string | null;
+    description: string | null;
+    skills: string[];
   }) => {
     return (
       <a
-        onClick={() => handleRoute(link)}
-        className="lg:hover:scale-95 duration-200 hover:cursor-pointer lg:active:scale-90 hover:grayscale-0 grayscale"
+        onClick={link ? () => handleRoute(link) : () => null}
+        className="lg:hover:scale-95 duration-100 hover:cursor-pointer lg:active:scale-90 hover:grayscale-0 lg:grayscale-0 grayscale-0 bg-[#fffdfd] shadow-md font-light hover:font-semibold"
       >
-        {children}
+        <img src={img} className="" />
+        {/* <div className="">{children}</div> */}
+        <p className="text-left text-lg p-5 border-b-2">{description}</p>
+        <div className="flex flex-wrap justify-center p-5">
+          {skills?.map((skill) => (
+            <SkillPill text={skill} />
+          ))}
+        </div>
       </a>
     );
   };
@@ -57,46 +68,61 @@ export default function Projects() {
           />
         }
       />
-      <div className="grid lg:grid-rows-2 lg:grid-cols-4 grid-flow-row mt-10 lg:mt-0">
-        <PortfolioItem link="/RideCaller">
-          <img src="ridecaller.png" />
-        </PortfolioItem>
-        <PortfolioItem link="https://blackstone.aaronnn.com">
-          <img src="landing-page.png" />
-        </PortfolioItem>
-        <PortfolioItem link="https://expressions.aaronnn.com">
-          <img src="expression.jpg" />
-        </PortfolioItem>
-        <PortfolioItem link="https://pong.aaronnn.com">
-          <img src="pong.png" />
-        </PortfolioItem>
-        <PortfolioItem link="/Land">
-          <img src="landscape.png" />
-        </PortfolioItem>
-        {/* <PortfolioItem link="/Land">
-          <img src="landscape.png" />
-        </PortfolioItem> */}
-        <div className="col-span-3 text-neutral-950 duration-700 hover:text-[#f0f0f5] flex items-center justify-center">
-          <h1 className="text-5xl">More coming soon...</h1>
-        </div>
-        {/* <PortfolioItem>
-          <img src="nwts.png" />
-        </PortfolioItem>
-        <PortfolioItem>
-          <img src="nwts.png" />
-        </PortfolioItem>
-        <PortfolioItem>
-          <img src="nwts.png" />
-        </PortfolioItem>
-        <PortfolioItem>
-          <img src="nwts.png" />
-        </PortfolioItem>
-        <PortfolioItem>
-          <img src="nwts.png" />
-        </PortfolioItem>
-        <PortfolioItem>
-          <img src="nwts.png" />
-        </PortfolioItem> */}
+      <div className="grid lg:grid-rows-2 lg:grid-cols-4 grid-flow-row grid-cols-1 mt-10 lg:mt-0 gap-1 ">
+        <PortfolioItem
+          img="ridecaller.png"
+          link="/RideCaller"
+          description="Full-stack cross platform app for arranged chauffeur services"
+          skills={["React Native", "TypeScript", "Expo SDK", "PostgreSQL"]}
+        />
+        <PortfolioItem
+          img="landing-page.png"
+          link="https://blackstone.aaronnn.com"
+          description="Dynamic & responsive landing page template for businesses"
+          skills={["React", "TypeScript", "Next.js", "Tailwind CSS", "SCSS"]}
+        />
+        <PortfolioItem
+          img="expression.jpg"
+          link="https://expressions.aaronnn.com"
+          description="Facial expression detection using built-in webcam for desktop"
+          skills={["HTML", "JavaScript", "CSS", "face.js API"]}
+        />
+        <PortfolioItem
+          img="landscape.png"
+          link="/Land"
+          description="Regenerative topographics where no two renders are alike"
+          skills={["React", "TypeScript", "p5.js", "react-p5"]}
+        />
+        <PortfolioItem
+          img="pong.png"
+          link="https://pong.aaronnn.com"
+          description="Pong with score counter, shifting colors, & increasing difficulty"
+          skills={["HTML", "JavaScript", "CSS", "SCSS"]}
+        />
+        <PortfolioItem
+          img="comingsoon.png"
+          link="/Projects"
+          description={
+            "Remote training platform for medical student labs... TBD"
+          }
+          skills={["TensorFlow", "React Native", "TBD"]}
+        />
+          <PortfolioItem
+            img="comingsoon.png"
+            link="/Projects"
+            description={
+              "Enable informed decision making for city officials, developers, & the public on development proposals"
+            }
+            skills={["React", "Next.js", "TypeScript", "PostgreSQL"]}
+          />
+        <PortfolioItem
+          img="comingsoon.png"
+          link="/Projects"
+          description={
+            "Cross platform marketplace for driving instructors and young drivers... TBD"
+          }
+          skills={["React Native", "TypeScript", "Expo", "SQL", "TBD"]}
+        />
       </div>
     </div>
   );

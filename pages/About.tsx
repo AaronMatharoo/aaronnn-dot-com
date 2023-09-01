@@ -1,13 +1,10 @@
 import Navigation from "@components/Navigation";
 import NavigationButton from "@components/NavigationButton";
-import SlidingBanner from "@components/SlidingBanner";
+import SkillPill from "@components/SkillPill";
 import TypeWriter from "@components/TypeWriter";
 import useHandleRoute from "hooks/useHandleRoute";
-import Head from "next/head";
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 import { BsMailbox } from "react-icons/bs";
-import { GrContactInfo, GrWorkshop } from "react-icons/gr";
+import { GrWorkshop } from "react-icons/gr";
 import { LuNewspaper } from "react-icons/lu";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
@@ -30,16 +27,6 @@ export default function About() {
     "EXPO SDK",
     "REACT NATIVE",
   ];
-
-  const SkillPill = ({ text }: { text: string }) => {
-    return (
-      <>
-        <div className="bg-[#5d00d7] w-min h-min rounded-md px-2 text-white  whitespace-nowrap font-light mr-2 my-1">
-          {text}
-        </div>
-      </>
-    );
-  };
 
   const { handleRoute } = useHandleRoute();
 
@@ -72,7 +59,6 @@ export default function About() {
       </div>
       <div className="grid lg:grid-cols-2 grid-flow-row lg:py-0 py-10">
         <div className="flex items-center p-10">
-          {/* <h1 className="text-xl font-light">Hey there!</h1> */}
           <div className=" space-y-5">
             <div className="hidden lg:flex">
               <TypeWriter text="My name is Aaron!" />
@@ -141,7 +127,7 @@ export default function About() {
         <div className="lg:hidden justify-center h-min flex">
           <img src="IDCard-02.png" alt="" className="lg:h-[250px] h-[100px]" />
         </div>
-        <div className="p-10 space-y-5">
+        <div className="p-10 pb-20 space-y-5">
           <h1 className="font-semibold text-3xl hidden lg:block">
             Who Am I? Where am I?
           </h1>
@@ -150,15 +136,25 @@ export default function About() {
           </h1>
           <div className="space-y-5">
             <h1 className="font-light text-xl">
-              I'm Aaron Matharoo! Technology enthusiast, problem solver, sim
-              racer, and global citizen hailing from the city of London,
+              I'm
+              <span className="text-[#5d00d7] font-semibold">
+                {" "}
+                Aaron Matharoo
+              </span>
+              ! Technology enthusiast,{" "}
+              <span className="underline decoration-[#5d00d7] font-semibold">
+                problem solver
+              </span>
+              , sim racer, and global citizen hailing from the city of London,
               England.
             </h1>
-            {/* <h1>Where am i now? Great question.</h1> */}
             <h1 className="font-light text-xl">
-              Although I come from overseas, I've spent most of my life right
-              here in the GTA (Greater Toronto Area), which is currently where I
-              am right now!
+              Although I come from overseas,
+              <span className="font-semibold">
+                {" "}
+                I've spent most of my life right here in the GTA{" "}
+              </span>
+              (Greater Toronto Area), which is currently where I am right now!
             </h1>
           </div>
         </div>
@@ -169,7 +165,7 @@ export default function About() {
           <img
             src="Career-02.png"
             alt=""
-            className="lg:h-[425px] h-[150px] mt-5"
+            className="lg:h-[405px] h-[150px] mt-5"
           />
         </div>
         <div className="p-10 space-y-5">
@@ -180,20 +176,37 @@ export default function About() {
             <h1 className="font-light text-xl">
               All of my studying was completed right here in Southern Ontario. I
               come equipped with strong foundations in information technology,
-              computer science, and software development. However, it was the
-              real-world experiences that truly made my experiences rich!
+              <span className="font-semibold text-[#5d00d7]">
+                {" "}
+                computer science{" "}
+              </span>
+              , and
+                {" "}
+              <span className="underline decoration-[#5d00d7] font-semibold">
+                software development
+              </span>
+              . However, it was the real-world experiences that truly made my
+              experiences rich!
             </h1>
             {/* <h1>Where am i now? Great question.</h1> */}
             <h1 className="font-light text-xl">
-              My experiences range from working on team projects at civil
-              engineering firms, leading magazine production teams, building my
-              own cross-platform applications, all the way to working at world
-              class corporate offices!
+              My experiences range from working on team projects at
+              <span className="font-semibold"> engineering firms</span>, leading
+              magazine production teams, building my own
+              <span className="font-semibold text-[#5d00d7]">
+                {" "}
+                cross-platform applications
+              </span>
+              , all the way to working at{" "}
+              <span className="underline decoration-[#5d00d7] font-semibold">
+                world class corporate offices
+              </span>
+              !
             </h1>
             <h1 className="font-light text-xl">
               My passion for engineering and technology led me to contribute to
-              multiple firms, and my creative side thrived through various
-              design projects.
+              multiple firms, and my creative side thrived through various team
+              projects.
             </h1>
           </div>
           <div className="flex justify-center py-10">
@@ -205,7 +218,7 @@ export default function About() {
             </button>
           </div>
         </div>
-        <div className="p-10 space-y-5">
+        <div className="px-10 pb-20 space-y-5">
           <div className="flex justify-center h-min lg:hidden">
             <img
               src="tech-02.png"
@@ -218,36 +231,45 @@ export default function About() {
           </h1>
           <div className="space-y-5">
             <h1 className="font-light text-xl">
-              My mission is to make a tangible difference in the tech landscape.
-              I'm eager to collaborate with a dynamic team that shares my
-              passion for pushing boundaries and embracing new challenges.
-              Technology isn't just a career for me; it's a way of life. I'm a
-              firm believer that innovation has the power to transform lives.
+              My mission is to make a tangible difference in the tech landscape
+              by collaborating with teams that push boundaries and embrace new
+              challenges. Technology isn't just a career for me;
+              <span className="font-semibold"> it's a way of life</span>, and
+              innovation has the power to transform lives.
             </h1>
             <h1 className="font-light text-xl">
-              Coding is my canvas, and I love turning complex problems into
-              elegant solutions! My expertise shines when working with React and
-              React Native, weaving intricate web and app experiences. I've also
-              mastered the art of using both vanilla CSS and CSS libraries to
-              craft stunning visuals while keeping user experience at the
-              forefront. Back-end development is something I've become
-              especially good at as well, managing user security and optimizing
-              data retrieval as needed.
+              I enjoy turning complex problems into elegant solutions,
+              <span className="text-[#5d00d7] font-semibold">
+                {" "}
+                especially using React
+              </span>
+              . I've mastered the art of using CSS to {" "}
+              <span className="underline decoration-[#5d00d7] font-semibold">
+              craft stunning visuals
+                </span>{"  "} 
+              while keeping user experience at the forefront. Back-end
+              development is something I've become especially good at as well,
+              managing user security and optimizing data retrieval as needed.
             </h1>
             <h1 className="font-light text-xl">
-              Outside of the tech realm though, you'll find me at the gym or
-              indulging my need for speed through sim racing and topping global
-              leaderboards with the fastest lap times. As for what's next in my
-              professional career, my journey is an ongoing adventure. Impactful
-              solutions for web and application development is at the forefront
-              of my sights. Beyond that, exploring the realm of cybersecurity
-              and information technology to see how we can produce more robust,
-              long term solutions is what I will be focusing on.
+              Outside of the tech realm, you'll find me at the gym, indulging my
+              need for speed through sim racing, or listening to good music. As
+              for what's next in my professional career,{" "}
+              <span className="underline decoration-[#5d00d7] font-semibold">
+                impactful solutions for web and application development
+              </span>{" "}
+              is at the forefront of my sights. Beyond that, exploring the realm
+              of{" "}
+              <span className="text-[#5d00d7] font-semibold">
+                cybersecurity and information technology
+              </span>{" "}
+              to see how we can produce more robust, long term solutions is what
+              I will be focusing on.
             </h1>
           </div>
         </div>
         <div className="lg:flex justify-center h-min hidden ">
-          <img src="tech-02.png" alt="" className="h-[350px] mt-16" />
+          <img src="tech-02.png" alt="" className="h-[350px] mt-32" />
         </div>
         <div className="flex justify-center h-min">
           <img
@@ -263,10 +285,15 @@ export default function About() {
           <div className="space-y-5">
             <h1 className="font-light text-xl">
               Whether it's a coding conundrum, a design challenge, or a
-              conversation about the latest tech trends, I'm always up for a
-              meaningful exchange. Join me as I continue to learn, innovate, and
-              make my mark on the ever-evolving tech landscape. Looking forward
-              to connecting with you!
+              conversation about the latest tech trends,{" "}
+              <span className="font-semibold underline decoration-[#5d00d7]">
+                I'm always up for a meaningful exchange
+              </span>
+              . Join me as I continue to learn, innovate, and make my mark on
+              the ever-evolving tech landscape. {" "}
+              <span className="font-semibold text-[#5d00d7]">
+                Looking forward to connecting with you!
+              </span>
             </h1>
             <div className="flex justify-center py-10">
               <button

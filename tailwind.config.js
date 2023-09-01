@@ -5,9 +5,10 @@ module.exports = {
     extend: {
       animation: {
         'arrow-ping': 'ping 3s ease-in-out infinite',
-      }
-    },
+      },
+   
   },
   plugins: [],
+}
 }
 
