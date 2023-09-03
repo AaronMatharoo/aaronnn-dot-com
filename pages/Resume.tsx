@@ -11,46 +11,69 @@ import { BsMailbox } from "react-icons/bs";
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
 export default function Resume() {
-    const pageWidth = typeof window !== 'undefined' ? window.innerWidth * 0.95 : 800;
+  const pageWidth =
+    typeof window !== "undefined" ? window.innerWidth * 0.95 : 800;
 
   const PDFViewer = () => {
     return (
       <div className="">
         <Document file="devresume.pdf">
-          <Page renderTextLayer={false} pageNumber={1} width={pageWidth} />
+          <Page
+            renderTextLayer={false}
+            pageNumber={1}
+            width={
+              typeof window !== "undefined"
+                ? window.outerWidth <= 400
+                  ? pageWidth
+                  : pageWidth / 1.5
+                : pageWidth
+            }
+          />
         </Document>
       </div>
     );
+  };
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "devresume.pdf"; // The path to your PDF file
+    link.download = "Aaron-Matharoo-Resume.pdf"; // The name you want for the downloaded file
+    link.click();
   };
 
   return (
     <div className="">
       <Navigation
-         route2={
-            <NavigationButton
-              text="PROJECTS"
-              link="/Projects"
-              icon={<GrWorkshop size={30} />}
-            />
-          }
-          route3={
-            <NavigationButton
-              text="ABOUT"
-              link="/About"
-              icon={<GrContactInfo size={30} />}
-            />
-            
-          }
-          route4={
-            <NavigationButton
-              text="CONTACT"
-              link="/Contact"
-              icon={<BsMailbox size={30} />}
-            />
-          }
+        route2={
+          <NavigationButton
+            text="PROJECTS"
+            link="/Projects"
+            icon={<GrWorkshop size={30} />}
+          />
+        }
+        route3={
+          <NavigationButton
+            text="ABOUT"
+            link="/About"
+            icon={<GrContactInfo size={30} />}
+          />
+        }
+        route4={
+          <NavigationButton
+            text="CONTACT"
+            link="/Contact"
+            icon={<BsMailbox size={30} />}
+          />
+        }
       />
-      <div className="mt-20 ml-4 lg:ml-12">
-      <PDFViewer />
+      <div className="lg:pt-0">
+        <div className=" absolute z-30 lg:top-20 bottom-10 left-1/2 transform -translate-x-1/2">
+          <button className="bg-white lg:hover:bg-[#5d00d7] text-2xl font-light border-2 border-[#5d00d7] text-[#5d00d7] rounded-md py-1 px-2"     onClick={handleDownload}>
+            Download
+          </button>
+        </div>
+        <div className={`mt-20 lg:mt-20 lg:ml-[20%] ml-4 bg-pink-400`}>
+          <PDFViewer />
+        </div>
       </div>
     </div>
   );

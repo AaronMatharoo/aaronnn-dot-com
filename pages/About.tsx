@@ -307,8 +307,7 @@ export default function About() {
         </div>
         <div className="hover:text-[#5d00d7] underline py-5 mt-10 lg:flex justify-center text-center bg-[#ffffff] lg:col-span-2 col-span-1 px-5 lg:px-0">
           <h1>
-            This site was created using Next.js, React, & Tailwind. All icons,
-            images, and special effects were created custom. Details of this
+            Details of this
             site can be found in the public repository on my GitHub
             @AaronMatharoo (aaronmatharoo)
           </h1>

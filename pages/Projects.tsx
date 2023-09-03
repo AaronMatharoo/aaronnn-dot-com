@@ -29,7 +29,9 @@ export default function Projects() {
     return (
       <a
         onClick={link ? () => handleRoute(link) : () => null}
-        className="lg:hover:scale-95 duration-100 hover:cursor-pointer lg:active:scale-90 hover:grayscale-0 lg:grayscale-0 grayscale-0 bg-[#fffdfd] shadow-md font-light hover:font-semibold"
+        className="lg:hover:scale-100 duration-150 hover:cursor-pointer 
+        lg:hover:border-x-[10px] lg:hover:border-y-[8px] border-black
+        lg:active:scale-90 hover:grayscale-0 lg:grayscale grayscale-0 bg-[#fffdfd] shadow-md font-light lg:hover:font-semibold"
       >
         <img src={img} className="" />
         {/* <div className="">{children}</div> */}
@@ -97,7 +99,7 @@ export default function Projects() {
           img="pong.png"
           link="https://pong.aaronnn.com"
           description="Pong with score counter, shifting colors, & increasing difficulty"
-          skills={["HTML", "JavaScript", "CSS", "SCSS"]}
+          skills={["HTML", "JavaScript", "CSS"]}
         />
         <PortfolioItem
           img="comingsoon.png"
@@ -111,7 +113,7 @@ export default function Projects() {
             img="comingsoon.png"
             link="/Projects"
             description={
-              "Enable informed decision making for city officials, developers, & the public on development proposals"
+              "Increase stakeholder engagement on development proposals"
             }
             skills={["React", "Next.js", "TypeScript", "PostgreSQL"]}
           />
@@ -119,7 +121,7 @@ export default function Projects() {
           img="comingsoon.png"
           link="/Projects"
           description={
-            "Cross platform marketplace for driving instructors and young drivers... TBD"
+            "Marketplace for driving instructors & young drivers... TBD"
           }
           skills={["React Native", "TypeScript", "Expo", "SQL", "TBD"]}
         />
