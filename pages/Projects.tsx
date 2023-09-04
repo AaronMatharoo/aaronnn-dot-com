@@ -45,6 +45,8 @@ export default function Projects() {
     );
   };
 
+
+
   return (
     <div className="bg-black">
       <Navigation
@@ -100,6 +102,12 @@ export default function Projects() {
           link="https://pong.aaronnn.com"
           description="Pong with score counter, shifting colors, & increasing difficulty"
           skills={["HTML", "JavaScript", "CSS"]}
+        />
+        <PortfolioItem
+          img="renders.png"
+          link="/Renders"
+          description="Gallery of room renders made with 3D computer graphics software"
+          skills={["Blender", "Python", "react-responsive-carousel"]}
         />
         <PortfolioItem
           img="comingsoon.png"

@@ -68,13 +68,16 @@ export default function Resume() {
       <div className="lg:pt-0">
         <div className=" absolute z-30 lg:top-20 bottom-10 left-1/2 transform -translate-x-1/2">
           <button
-            className="bg-white lg:hover:scale-110 active:scale-95 duration-100 text-2xl font-light border-2 border-[#5d00d7] text-[#5d00d7] rounded-md py-1 px-2"
+            className="flex items-center space-x-1 bg-white lg:hover:scale-110 active:scale-95 duration-100 text-2xl hover:font-semibold border-y-2 border-x-4 hover:border-x-8 border-black text-black py-1 px-2"
             onClick={handleDownload}
           >
-            Download
+            <h1>DOWNLOAD</h1>
+            <div>
+              <img src="downloadicon.png" alt="" className="h-8 hidden lg:block" />
+            </div>
           </button>
         </div>
-        <div className={`mt-20 lg:mt-20 lg:ml-[20%] ml-4 bg-pink-400`}>
+        <div className={`mt-20 lg:mt-20 lg:ml-[20%] ml-4`}>
           <PDFViewer />
         </div>
       </div>
