@@ -4,9 +4,9 @@ This is aaronnn.com, a [Next.js](https://nextjs.org/) v12 project bootstrapped w
 
 This project is a quick overview of my capabilities, skills, and work experience. Netlify was the ideal choice for this type of project, especially given the vast array of features it offered such as Preview Mode, server-side rendering/incremental static regeneration, and internationalized routing on deploy automatically. The automatic deploy made issuing updates a breeze!
 
-[![Visit aaronnn.com](https://www.aaronnn.com)]
+[https://aaronnn.com/](https://aaronnn.com/)
 
-(This button will take you directly to my site!)
+(This link will take you directly to my site!)
 
 ## A Public Invitation:
 
