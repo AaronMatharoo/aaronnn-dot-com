@@ -35,8 +35,8 @@ export default function Resume() {
   };
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "devresume.pdf"; // The path to your PDF file
-    link.download = "Aaron-Matharoo-Resume.pdf"; // The name you want for the downloaded file
+    link.href = "devresume.pdf";
+    link.download = "Aaron-Matharoo-Resume.pdf";
     link.click();
   };
 

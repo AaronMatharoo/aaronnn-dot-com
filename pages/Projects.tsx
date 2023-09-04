@@ -110,6 +110,12 @@ export default function Projects() {
           skills={["Blender", "Python", "react-responsive-carousel"]}
         />
         <PortfolioItem
+          img="statimage.png"
+          link="/StatisticalAnalysis"
+          description="Statistical computation of Stephen Curry's performance (2020-2021)"
+          skills={["R", "R Studio", "Quantitative Analysis"]}
+        />
+        <PortfolioItem
           img="comingsoon.png"
           link="/Projects"
           description={
