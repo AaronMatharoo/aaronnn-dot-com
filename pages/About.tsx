@@ -152,9 +152,9 @@ export default function About() {
               Although I come from overseas,
               <span className="font-semibold">
                 {" "}
-                I've spent most of my life right here in the GTA{" "}
+                I've spent most of my life in the GTA{" "}
               </span>
-              (Greater Toronto Area), which is currently where I am right now!
+              (Greater Toronto Area), but now <span className="text-[#5d00d7] font-semibold">I am all over North America</span>, working and living in both Canada & the United States!
             </h1>
           </div>
         </div>
@@ -174,7 +174,7 @@ export default function About() {
           </h1>
           <div className="space-y-5">
             <h1 className="font-light text-xl">
-              All of my studying was completed right here in Southern Ontario. I
+              All of my studying was completed in Southern Ontario, Canada. I
               come equipped with strong foundations in information technology,
               <span className="font-semibold text-[#5d00d7]">
                 {" "}
