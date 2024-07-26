@@ -11,22 +11,22 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 export default function About() {
   const SkillList = [
     "REACT",
+    "REACT NATIVE",
     "TYPESCRIPT",
     "JAVASCRIPT",
+    "GRAPHQL",
+    "NODE.JS",
+    "EXPRESS.JS",
     "HTML5",
     "CSS",
-    "REDUX",
-    "REACT CONTEXT",
+    "RESTFUL APIS",
     "POSTGRESQL",
     "NOSQL",
-    "NODE.JS",
-    "RESTFUL APIS",
-    "GIT",
+    "AWS",
     "GITHUB",
-    "JEST",
-    "EXPO SDK",
-    "REACT NATIVE",
+    "POSTMAN",
   ];
+  
 
   const { handleRoute } = useHandleRoute();
 
@@ -67,7 +67,7 @@ export default function About() {
               <TypeWriter text="Hi I'm Aaron" />
             </div>
             <h1 className="text-xl font-light text-[#5d00d7]">
-              WEB APPLICATION DEVELOPER | SOFTWARE ENGINEER
+              APPLICATION ENGINEER | SOFTWARE DEVELOPER
             </h1>
           </div>
         </div>
@@ -139,7 +139,7 @@ export default function About() {
               I'm
               <span className="text-[#5d00d7] font-semibold">
                 {" "}
-                Aaron Matharoo
+                Aaron
               </span>
               ! Technology enthusiast,{" "}
               <span className="underline decoration-[#5d00d7] font-semibold">
@@ -152,9 +152,9 @@ export default function About() {
               Although I come from overseas,
               <span className="font-semibold">
                 {" "}
-                I've spent most of my life in the GTA{" "}
+                I've spent most of my life in Toronto{" "}
               </span>
-              (Greater Toronto Area), but now <span className="text-[#5d00d7] font-semibold">I am all over North America</span>, working and living in both Canada & the United States!
+              , but now <span className="text-[#5d00d7] font-semibold">I am all over North America</span>, working and living in both Canada & the United States!
             </h1>
           </div>
         </div>
@@ -175,10 +175,10 @@ export default function About() {
           <div className="space-y-5">
             <h1 className="font-light text-xl">
               All of my studying was completed in Southern Ontario, Canada. I
-              come equipped with strong foundations in information technology,
+              come equipped with strong foundations in IT,
               <span className="font-semibold text-[#5d00d7]">
                 {" "}
-                computer science{" "}
+                computer science
               </span>
               , and{" "}
               <span className="underline decoration-[#5d00d7] font-semibold">

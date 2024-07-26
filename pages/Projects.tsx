@@ -74,21 +74,21 @@ export default function Projects() {
       />
       <div className="grid lg:grid-rows-2 lg:grid-cols-4 grid-flow-row grid-cols-1 mt-10 lg:mt-0 gap-1 p-1 lg:p-0">
         <PortfolioItem
+          img="tangelo.png"
+          link="https://techtangelo.com"
+          description="Software agency website targeting small to medium sized businesses"
+          skills={["Next.js", "React", "TypeScript", "TailwindCSS", "EmailJS", "SMTP"]}
+        />
+        <PortfolioItem
           img="ridecaller.png"
           link="/RideCaller"
           description="Full-stack cross platform app for arranged chauffeur services"
           skills={["React Native", "TypeScript", "Expo SDK", "PostgreSQL"]}
         />
         <PortfolioItem
-          img="landing-page.png"
-          link="https://blackstone.aaronnn.com"
-          description="Dynamic & responsive landing page template for businesses"
-          skills={["React", "TypeScript", "Next.js", "Tailwind CSS", "SCSS"]}
-        />
-        <PortfolioItem
           img="expression.jpg"
           link="https://expressions.aaronnn.com"
-          description="Facial expression detection using built-in webcam for desktop"
+          description="Facial expression detection using built-in webcam (Desktop only)"
           skills={["HTML", "JavaScript", "CSS", "tensorflow.js", "face-api.js"]}
         />
         <PortfolioItem
@@ -110,11 +110,18 @@ export default function Projects() {
           skills={["Blender", "Python", "react-responsive-carousel"]}
         />
         <PortfolioItem
+          img="landing-page.png"
+          link="https://blackstone.aaronnn.com"
+          description="Dynamic & responsive landing page template for businesses"
+          skills={["React", "TypeScript", "Next.js", "Tailwind CSS", "SCSS"]}
+        />
+        <PortfolioItem
           img="statimage.png"
           link="/StatisticalAnalysis"
           description="Statistical computation of Stephen Curry's performance (2020-2021)"
           skills={["R", "R Studio", "Quantitative Analysis"]}
         />
+        {/* //NEW15LENSES */}
         <PortfolioItem
           img="comingsoon.png"
           link="/Projects"

@@ -1,6 +1,10 @@
 import useHandleRoute from "hooks/useHandleRoute";
+import { useRouter } from "next/router";
 import { ReactNode, useEffect, useState } from "react";
 import { AiOutlineHome } from "react-icons/ai";
+import { BsMailbox } from "react-icons/bs";
+import { GrContactInfo, GrWorkshop } from "react-icons/gr";
+import { LuNewspaper } from "react-icons/lu";
 
 const Navigation = ({
   route2,
@@ -11,7 +15,6 @@ const Navigation = ({
   route3: ReactNode;
   route4: ReactNode;
 }) => {
-
   const { handleRoute } = useHandleRoute();
 
   const NavButton = ({
@@ -19,13 +22,16 @@ const Navigation = ({
     link,
     icon,
   }: {
-    text: string;
+    text: string | ReactNode;
     link: string;
     icon: ReactNode;
   }) => {
+    const router = useRouter();
+
+  const isActive = router.pathname === link;
     return (
       <a onClick={() => handleRoute(link)}>
-        <div className=" hover:text-white hover:bg-[#5d00d7] bg-[#f0f0f5] border-2 border-black lg:hover:border-x-[10px] duration-100 hover:border-2 hover:font-bold hover:cursor-pointer active:scale-95 py-1 justify-center flex">
+        <div className={`hover:text-white hover:bg-[#5d00d7] ${isActive ? `text-white font-semibold bg-[#5d00d7] lg:border-x-[10px]` : `bg-[#f0f0f5]`} border-2 border-black lg:hover:border-x-[10px] duration-100 hover:border-2 hover:font-bold hover:cursor-pointer active:scale-95 py-1 justify-center flex`}>
           <h1 className="text-3xl text-center lg:flex hidden">{text}</h1>
           <div className="lg:hidden">{icon}</div>
         </div>
@@ -44,11 +50,42 @@ const Navigation = ({
   }) => {
     return (
       <>
-        <div className="grid grid-cols-4 bg-black">
-          <NavButton text="HOME" link="/" icon={<AiOutlineHome size={30} />} />
-          {route2}
-          {route3}
-          {route4}
+        <div className="grid grid-cols-10 bg-black">
+          <div className="col-span-2">
+            <NavButton
+              text={"HOME"}
+              link="/"
+              icon={<AiOutlineHome size={30} />}
+            />
+          </div>
+          <div className="col-span-2">
+            <NavButton
+              text="PROJECTS"
+              link="/Projects"
+              icon={<GrWorkshop size={30} />}
+            />
+          </div>
+          <div className="col-span-2">
+            <NavButton
+              text="ABOUT"
+              link="/About"
+              icon={<GrContactInfo size={30} />}
+            />
+          </div>
+          <div className="col-span-2">
+            <NavButton
+              text="RESUME"
+              link="/Resume"
+              icon={<LuNewspaper size={30} />}
+            />
+          </div>
+          <div className="col-span-2">
+            <NavButton
+              text="CONTACT"
+              link="/Contact"
+              icon={<BsMailbox size={30} />}
+            />
+          </div>
         </div>
       </>
     );
