@@ -34,10 +34,10 @@ export default function Resume() {
   };
 
   const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "devresume.pdf";
-    link.download = "Aaron-Matharoo-Resume.pdf";
-    link.click();
+    // const link = document.createElement("a");
+    // link.href = "devresume.pdf";
+    // link.download = "Aaron-Matharoo-Resume.pdf";
+    // link.click();
   };
 
   return (
