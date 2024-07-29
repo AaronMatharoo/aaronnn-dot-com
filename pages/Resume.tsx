@@ -82,7 +82,7 @@ export default function Resume() {
           </button>
         </div>
         <div className={`mt-20 lg:mt-20 lg:ml-[20%] ml-4 relative z-0`}>
-          <PDFViewer />
+          {/* <PDFViewer /> */}
         </div>
       </div>
     </div>
