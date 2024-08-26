@@ -74,6 +74,12 @@ export default function Projects() {
       />
       <div className="grid lg:grid-rows-2 lg:grid-cols-4 grid-flow-row grid-cols-1 mt-10 lg:mt-0 gap-1 p-1 lg:p-0">
         <PortfolioItem
+          img="appsec.png"
+          link="https://github.com/AaronMatharoo/secure-event-management-system"
+          description="In-depth Application Security & Security-By-Design demonstration"
+          skills={["React", "TypeScript", "Node.js", "Express.js", "JWTs", "PostgreSQL"]}
+        />
+        <PortfolioItem
           img="tangelo.png"
           link="https://techtangelo.com"
           description="Software agency website targeting small to medium sized businesses"
