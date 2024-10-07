@@ -45,8 +45,6 @@ export default function Projects() {
     );
   };
 
-
-
   return (
     <div className="bg-black">
       <Navigation
@@ -76,20 +74,65 @@ export default function Projects() {
         <PortfolioItem
           img="appsec.png"
           link="https://github.com/AaronMatharoo/secure-event-management-system"
-          description="In-depth Application Security & Security-By-Design demonstration"
-          skills={["React", "TypeScript", "Node.js", "Express.js", "JWTs", "PostgreSQL"]}
+          description="In-depth Application Security & Security-By-Design demo"
+          skills={[
+            "React",
+            "TypeScript",
+            "Node.js",
+            "Express.js",
+            "JWTs",
+            "PostgreSQL",
+          ]}
+        />
+        <PortfolioItem
+          img="shocker.png"
+          link="/Shocker"
+          description="Write up on Linux machine from HackTheBox: Shocker"
+          skills={[
+            "Nmap",
+            "Gobuster",
+            "Shellshock",
+            "OOB Testing",
+            "NetCat",
+            "LinPEAS",
+          ]}
+        />
+        <PortfolioItem
+          img="soccer.png"
+          link="/Soccer"
+          description="Write up on Linux machine from HackTheBox: Soccer"
+          skills={["Nmap", "Gobuster", "Reverse Shell", "SQL Injection", "SSH"]}
         />
         <PortfolioItem
           img="tangelo.png"
           link="https://techtangelo.com"
           description="Software agency website targeting small to medium sized businesses"
-          skills={["Next.js", "React", "TypeScript", "TailwindCSS", "EmailJS", "SMTP"]}
+          skills={[
+            "Next.js",
+            "React",
+            "TypeScript",
+            "TailwindCSS",
+            "EmailJS",
+            "SMTP",
+          ]}
+        />
+        <PortfolioItem
+          img="networked.png"
+          link="/Networked"
+          description="Write up on Linux machine from HackTheBox: Networked"
+          skills={["Nmap", "Gobuster", "Reverse Shell", "File Upload", "PHP"]}
         />
         <PortfolioItem
           img="ridecaller.png"
           link="/RideCaller"
           description="Full-stack cross platform app for arranged chauffeur services"
           skills={["React Native", "TypeScript", "Expo SDK", "PostgreSQL"]}
+        />
+        <PortfolioItem
+          img="sense.png"
+          link="/Sense"
+          description="Write up on Linux machine from HackTheBox: Sense"
+          skills={["Nmap", "Gobuster", "Command Injection", "Python"]}
         />
         <PortfolioItem
           img="expression.jpg"
@@ -136,14 +179,14 @@ export default function Projects() {
           }
           skills={["TensorFlow", "React Native", "TBD"]}
         />
-          <PortfolioItem
-            img="comingsoon.png"
-            link="/Projects"
-            description={
-              "Increase stakeholder engagement on development proposals"
-            }
-            skills={["React", "Next.js", "TypeScript", "PostgreSQL"]}
-          />
+        <PortfolioItem
+          img="comingsoon.png"
+          link="/Projects"
+          description={
+            "Increase stakeholder engagement on development proposals"
+          }
+          skills={["React", "Next.js", "TypeScript", "PostgreSQL"]}
+        />
         <PortfolioItem
           img="comingsoon.png"
           link="/Projects"
