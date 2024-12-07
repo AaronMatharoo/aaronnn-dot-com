@@ -1,44 +1,43 @@
 import Marquee from "react-fast-marquee";
 
 const SlidingBanner = () => {
-    const SlidingTexts = [
-      "App Development",
-        "Music",
-        "Engineering",
-        "Racing",
-        "Programming",
-        "Design",
-        // "Hip-Hop",
-        // "R&B",
-        "Sim-Racing",
-        "Cyber Security",
-        "Gaming",
-        "Software Engineering",
-        "Fashion",
-        "Automotive Engineering",
-        "Charity",
-      ];
-    
-      const Slider = () => {
-        return (
-          <>
-            <div className="w-full py-2 h-12 border-t-[3px] border-b-[3px] border-black overflow-hidden relative bg-[#f0f0f5]">
-              <Marquee>
-                {SlidingTexts.map((text) => (
-                  <div className=" flex items-center whitespace-nowrap flex-shrink-0">
-                    <p className="text-lg font-light">{text}</p>
-                    <img src="aa.png" className="mx-5 h-7" />
-                  </div>
-                ))}
-              </Marquee>
-            </div>
-          </>
-        );
-      };
+  const SlidingTexts = [
+    "Pen-Testing",
+    "App Development",
+    "Music",
+    "Engineering",
+    "Racing",
+    "Programming",
+    // "Design",
+    // "Hip-Hop",
+    // "R&B",
+    "Sim-Racing",
+    "Offensive Security",
+    // "Gaming",
+    "Software Engineering",
+    // "Fashion",
+    // "Automotive Engineering",
+    // "Charity",
+  ];
 
-      return (
-        <Slider />
-      )
-}
+  const Slider = () => {
+    return (
+      <>
+        <div className="w-full py-2 h-12 border-t-[3px] border-b-[3px] border-black overflow-hidden relative bg-[#f0f0f5]">
+          <Marquee>
+            {SlidingTexts.map((text) => (
+              <div className=" flex items-center whitespace-nowrap flex-shrink-0">
+                <p className="text-lg font-light">{text}</p>
+                <img src="aa.png" className="mx-5 h-7" />
+              </div>
+            ))}
+          </Marquee>
+        </div>
+      </>
+    );
+  };
 
-export default SlidingBanner
+  return <Slider />;
+};
+
+export default SlidingBanner;
